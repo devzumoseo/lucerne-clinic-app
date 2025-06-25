@@ -1,0 +1,21 @@
+.redLine {
+  height: 4px;
+  width: 100%;
+  margin-bottom: 16px;
+  background: red;
+  display: flex;
+
+  &.hide {
+    display: none;
+  }
+
+  &~.redLine {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  &:nth-last-child(2) {
+    margin-bottom: 150px;
+  }
+}

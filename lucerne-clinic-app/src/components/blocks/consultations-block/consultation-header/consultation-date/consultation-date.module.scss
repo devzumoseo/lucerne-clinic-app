@@ -1,0 +1,31 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+
+    &.disable{
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 8px;
+    color: var(--ion-color-dark);
+  }
+}

@@ -1,0 +1,9 @@
+.content {
+  > *:first-child {
+    margin-top: env(safe-area-inset-top);
+  }
+
+  > *:last-child {
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+}

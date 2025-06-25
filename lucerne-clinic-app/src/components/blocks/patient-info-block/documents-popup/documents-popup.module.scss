@@ -1,0 +1,16 @@
+.group {
+  :global {
+    .alert-radio-label.sc-ion-alert-ios {
+      color: red;
+    }
+  }
+}
+
+#viewer-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+}

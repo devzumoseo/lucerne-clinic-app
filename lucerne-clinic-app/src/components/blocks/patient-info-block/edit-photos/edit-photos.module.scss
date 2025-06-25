@@ -1,0 +1,219 @@
+.form{
+  min-height: 100%;
+  display: block;
+
+  .titleGroup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    margin-bottom: 8px;
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      margin: 20px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+      color: var(--ion-color-primary);
+    }
+  }
+
+  .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--ion-color-dark);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .time {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 24px auto;
+    width: fit-content;
+    color: var(--ion-color-dark);
+
+    span {
+      margin-left: 8px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+      color: var(--ion-color-secondary-shade);
+    }
+  }
+
+  .imgGroup {
+    margin-bottom: 24px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .changePhoto {
+    margin-bottom: 40px;
+  }
+
+  .select {
+    margin-bottom: 35px;
+  }
+
+  .selectTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--ion-color-dark);
+    margin-bottom: 6px;
+  }
+
+  .btnGroup {
+    display: grid;
+    grid-template-columns: 145px auto;
+    grid-gap: 15px;
+    margin-bottom: 40px;
+
+    &.fileGroup {
+      margin-bottom: 20px;
+    }
+
+    :global {
+      .myButton {
+        height: 40px;
+        min-height: 40px;
+      }
+    }
+  }
+
+  .fileScan {
+    margin-bottom: 40px;
+  }
+
+  .addBtn {
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    border: 1px solid var(--ion-color-secondary);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+
+  .photos {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 16px;
+    justify-content: center;
+    align-items: center;
+
+    >div{
+      z-index: 0;
+      width: 100%;
+      height: 250px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      //overflow: hidden;
+      background: white;
+      border-radius: 8px;
+      //border: 1px solid var(--ion-color-secondary);
+      //box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      //border-radius: 8px;
+
+      .press {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .picBox {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--ion-color-secondary);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      .img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .close {
+        border: 1px solid var(--ion-color-secondary);
+        cursor: pointer;
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        border-radius: 16px;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        opacity: 1;
+        background: var(--ion-color-white);
+        z-index: 2;
+
+        &:hover {
+          transition: 0.3s;
+          opacity: .8;
+        }
+      }
+    }
+  }
+}
+
+.picForModal {
+  position: relative;
+  .picPic {
+    max-height: calc(100vh - 100px);
+  }
+  .closeModal{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    z-index: 2;
+
+    &:hover {
+      transition: 0.3s;
+      opacity: .8;
+    }
+
+    img{
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

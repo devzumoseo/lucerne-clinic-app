@@ -1,0 +1,77 @@
+.wrap {
+  width: 100%;
+  padding: 12px 14px;
+  border: 0.5px solid #C2C2C2;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  background: var(--ion-color-secondary-light);
+  position: relative;
+  overflow: hidden;
+
+  &:nth-last-child(2) {
+    margin-bottom: 150px;
+  }
+  &.secondary {
+    background: var(--ion-color-secondary-light);
+  }
+  &.tertiary {
+    background: var(--ion-color-tertiary);
+  }
+  &.success {
+    background: var(--ion-color-success);
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 7px;
+
+    .time {
+      width: 55px;
+      margin-right: 10px;
+    }
+  }
+
+  p span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--ion-color-dark);
+  }
+
+  p:first-child {
+    margin-right: 32px;
+  }
+
+  .text {
+    font-weight: 400;
+  }
+  .time, .name {
+    display: flex;
+    align-items: center;
+
+    span{
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    img{
+      margin-right: 6px;
+    }
+  }
+
+  ion-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+  }
+}
